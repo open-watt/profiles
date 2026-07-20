@@ -36,6 +36,12 @@ OpenWatt loads profiles at runtime. A profile change therefore needs to be deplo
 alongside the compatible OpenWatt build; updating only the executable can leave the
 runtime profile grammar out of sync.
 
+The runtime searches its configured profile path recursively by profile basename. The
+path defaults to this repository at `conf/profiles`, can be set with
+`/system/profile-path`, and can be overridden with the process `--profile-path` option.
+Directories are only organisational, so every `.conf` basename must be globally unique.
+A duplicate is an error rather than an implicit protocol or filesystem-order preference.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Device documentation links, exact model
