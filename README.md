@@ -11,7 +11,7 @@ It is intended to be checked out by OpenWatt at `conf/profiles` as a Git submodu
 The profile format is being centralised and normalised. Existing protocol-specific
 profile directories are moving here as their loaders adopt the shared profile model.
 During that migration, the authoritative type descriptor grammar is documented in the
-header of [`src/manager/spec.d`](https://github.com/open-watt/openwatt/blob/main/src/manager/spec.d),
+header of [`src/manager/sample/spec.d`](https://github.com/open-watt/openwatt/blob/main/src/manager/sample/spec.d),
 and the wider model is described in
 [`docs/DATA_MODEL.draft.md`](https://github.com/open-watt/openwatt/blob/main/docs/DATA_MODEL.draft.md).
 
