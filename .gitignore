@@ -1,0 +1,22 @@
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local output
+*.bak
+*.log
+*.tmp
+
+# Deployment-specific or secret material
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+user.conf
