@@ -11,7 +11,7 @@ It is intended to be checked out by OpenWatt at `conf/profiles` as a Git submodu
 The profile format is being centralised and normalised. Existing protocol-specific
 profile directories are moving here as their loaders adopt the shared profile model.
 During that migration, the authoritative type descriptor grammar is documented in the
-header of [`src/manager/spec.d`](https://github.com/open-watt/openwatt/blob/main/src/manager/spec.d),
+header of [`src/manager/sample/spec.d`](https://github.com/open-watt/openwatt/blob/main/src/manager/sample/spec.d),
 and the wider model is described in
 [`docs/DATA_MODEL.draft.md`](https://github.com/open-watt/openwatt/blob/main/docs/DATA_MODEL.draft.md).
 
@@ -35,6 +35,12 @@ git submodule update --init conf/profiles
 OpenWatt loads profiles at runtime. A profile change therefore needs to be deployed
 alongside the compatible OpenWatt build; updating only the executable can leave the
 runtime profile grammar out of sync.
+
+The runtime searches its configured profile path recursively by profile basename. The
+path defaults to this repository at `conf/profiles`, can be set with
+`/system/profile-path`, and can be overridden with the process `--profile-path` option.
+Directories are only organisational, so every `.conf` basename must be globally unique.
+A duplicate is an error rather than an implicit protocol or filesystem-order preference.
 
 ## Contributing
 
